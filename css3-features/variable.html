@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variable</title>
+    <style>
+        :root{
+            --primary-color:purple;
+            --secondary-color: blue;
+            --third-color:lightgray;
+            --forth-color:lightskyblue;
+            --font-size: 12px;
+        }
+        h1{
+            color: var(--primary-color);
+        }
+        h5{
+            background-color: var(--primary-color);
+            width: 100%;
+        }
+        .box{
+            border: 2px solid var(--primary-color);
+        }
+        .box p{
+            color: var(--primary-color);
+            font-size: var(--font-size);
+        }
+        .sidebar{
+            background-color:var(--third-color) ;
+        }
+        .container{
+            background-color: var(--forth-color);
+            display: grid;
+            gap: 20px;
+            grid-template-rows: 500px;
+            grid-template-columns: 200px calc(100% - 200px - 20px);
+
+        }
+    </style>
+</head>
+<body>
+    <h1>My Custom Property</h1>
+    <h5>Also commonly knownn as CSS variables</h5>
+    <div class="box">
+        <h3>I am Doing Something</h3>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt ipsam ratione quasi qui? Rem exercitationem quo accusamus repudiandae atque dolores dolor consectetur aut, itaque delectus optio ad hic quod magni sint ducimus magnam, in culpa quia! Obcaecati labore dignissimos magnam tempore alias officiis culpa nihil laborum quia quam, expedita officia facere sint corrupti mollitia laboriosam incidunt accusantium sequi fugit ut maiores? Amet inventore placeat in deleniti alias earum mollitia, praesentium similique ad. Fugiat dignissimos, veritatis harum dolorum ea modi pariatur vel assumenda tempore, non ex deserunt quas. Distinctio nulla at enim. Doloribus, neque exercitationem porro culpa error assumenda a nihil!</p>
+    </div>
+    <div class="container">
+        <div class="sidebar">Sidebar</div>
+        <div class="content">Main Content</div>
+    </div>
+</body>
+</html>
